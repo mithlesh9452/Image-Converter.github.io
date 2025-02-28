@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Converter</h1>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" id="imageInput" accept="image/*" required>
+            <select id="formatSelect">
+                <option value="png">PNG</option>
+                <option value="jpeg">JPEG</option>
+                <option value="webp">WEBP</option>
+                <option value="bmp">BMP</option>
+                <option value="gif">GIF</option>
+            </select>
+            <button type="submit">Convert</button>
+        </form>
+        <div id="output">
+            <img id="convertedImage" src="" alt="Converted Image" style="display:none;">
+            <a id="downloadLink" href="#" download style="display:none;">Download Converted Image</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
